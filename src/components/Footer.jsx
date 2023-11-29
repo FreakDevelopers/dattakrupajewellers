@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../assets/img/logo/logo.png";
 
 function Footer() {
   return (
@@ -8,7 +7,7 @@ function Footer() {
         <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
           <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-100 dark:text-gray-300">
             <img
-              src={logo}
+              src={"https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"}
               className="w-10 h-10 text-white rounded-full"
               alt="Logo"
             />

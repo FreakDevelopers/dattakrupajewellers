@@ -7,63 +7,65 @@ function ProductLists() {
       name: "Golden Ring",
       category: "Men Ring",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/rings/r-37.jpg?updatedAt=1701258927203",
     },
     {
       id: 2,
       name: "Golden Ring",
       category: "Women Ring",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/rings/r-98.jpg?updatedAt=1701258943841",
     },
     {
       id: 3,
       name: "Silver Neckles",
       category: "Neckles",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/rings/r-96.jpg?updatedAt=1701258943654",
     },
     {
       id: 4,
-      name: "Golden Bangles",
-      category: "Men Bangles",
+      name: "Golden Ring",
+      category: "Men Ring",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/rings/r-35.jpg?updatedAt=1701258926911",
     },
     {
       id: 5,
       name: "Golden Ring",
-      category: "Ear Rings",
+      category: "Women Ring",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/rings/r-99.jpg?updatedAt=1701258943920",
     },
     {
       id: 6,
-      name: "Golden Ring",
-      category: "Men Ring",
+      name: "Silver Ring",
+      category: "Women Ring",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/rings/r-61.jpg?updatedAt=1701258932588",
     },
     {
       id: 7,
-      name: "Golden Ring",
-      category: "Men Ring",
+      name: "Golden Earring",
+      category: "Earring",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/earring/JE/je-3.jpg?updatedAt=1701258983769",
     },
     {
       id: 8,
-      name: "Golden Neckles",
-      category: "Neckles",
+      name: "Silver Earring",
+      category: "Earring",
       price: 1400,
-      path:"src/assets/img/jewellery/rings/r-1.jpg"
+      path: "https://ik.imagekit.io/dj/dj/jewellery/earring/SE/se-1.jpg?updatedAt=1701258976761",
     },
   ];
 
   return (
     <section className="text-gray-600 body-font">
       <div className="container py-5 mx-auto">
-        <h1 className="font-bold text-3xl p-4 text-black"><span className="text-orange-700">New </span> Arrivings</h1>
+        <h1 className="font-bold text-3xl p-4 text-black">
+          <span className="text-orange-700">New </span> Arrivings
+        </h1>
         <div className="w-12 h-1 ml-4 bg-yellow-500"></div>
         <div className="flex flex-wrap my-4">
           {products.map((product) => (
@@ -80,7 +82,7 @@ function ProductLists() {
                   {product.category}
                 </h3>
                 <h2 className="text-gray-900 title-font text-lg font-medium">
-                {product.name}
+                  {product.name}
                 </h2>
                 <p className="mt-1">₹{product.price}</p>
               </div>

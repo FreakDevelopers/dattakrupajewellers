@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import logo from "../assets/img/logo/logo.png";
 
 const navLinks = [
   {
@@ -34,7 +33,7 @@ function Navbar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to={"/"} className="text-white">
-              <img src={logo} alt="DJ_LOGO" srcset="" className="h-14 w-14" />
+              <img src={"https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"} alt="DJ_LOGO" srcset="" className="h-14 w-14" />
             </Link>
             <Link to={"/"} className="text-white ml-1">
               <span>Dattakrupa Jewellers</span>

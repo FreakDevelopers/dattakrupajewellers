@@ -10,7 +10,7 @@ function About() {
             <img
               className="object-cover object-center rounded bg-orange-50"
               alt="hero"
-              src="src\assets\img\logo\logo.png"
+              src="https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"
             />
           </div>
           <div className="lg:flex-grow md:w-1/2 md:pl-12 flex flex-col md:items-start md:text-left items-center text-center">

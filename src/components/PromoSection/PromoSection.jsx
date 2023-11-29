@@ -27,7 +27,7 @@ function PromoSection() {
             <img
               className="object-cover object-center rounded"
               alt="hero"
-              src="src\assets\img\jewellery\earring\e-3.jpg"
+              src="https://ik.imagekit.io/dj/dj/jewellery/earring/e-3.jpg?updatedAt=1701258975020"
             />
           </div>
         </div>
