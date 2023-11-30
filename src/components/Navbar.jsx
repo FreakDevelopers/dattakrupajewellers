@@ -8,7 +8,7 @@ const navLinks = [
     link: "/",
   },
   {
-    title: "Collecions",
+    title: "Collections",
     link: "/collections",
   },
   {

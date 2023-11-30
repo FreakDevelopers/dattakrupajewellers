@@ -36,7 +36,7 @@ function Footer() {
       items: [
         {
           href: "javascript:void()",
-          name: "contact",
+          name: "Contact",
         },
         {
           href: "javascript:void()",
@@ -94,7 +94,7 @@ function Footer() {
             </p>
           </div>
         </div>
-        <div className="flex-1 mt-10 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0">
+        <div className="flex flex-1 mt-10 items-center justify-evenly sm:flex md:mt-0">
           {footerNavs.map((item, idx) => (
             <ul className="space-y-4" key={idx}>
               <h4 className="text-gray-300 mr-4 font-medium text-lg">

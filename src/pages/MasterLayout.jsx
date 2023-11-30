@@ -7,7 +7,7 @@ function MasterLayout() {
   return (
     <>
       <Navbar />
-      <div className="container md:px-20 px-5">
+      <div className="md:px-20 px-5">
         <Outlet />
       </div>
       <Footer />

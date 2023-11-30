@@ -43,7 +43,7 @@ function Testimonials() {
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-3xl mx-auto text-center">
-          <h3 className="text-indigo-600 font-semibold pb-6">
+          <h3 className="text-yellow-500 font-semibold pb-6">
             What people are saying
           </h3>
           <ul>
@@ -84,7 +84,7 @@ function Testimonials() {
               <li key={idx}>
                 <button
                   className={`w-2.5 h-2.5 rounded-full duration-150 ring-offset-2 ring-indigo-600 focus:ring ${
-                    currentTestimonial == idx ? "bg-indigo-600" : "bg-gray-300"
+                    currentTestimonial == idx ? "bg-yellow-500" : "bg-gray-300"
                   }`}
                   onClick={() => setCurrentTestimonial(idx)}
                 ></button>
