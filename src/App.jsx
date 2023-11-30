@@ -13,7 +13,7 @@ function App() {
       element: <MasterLayout />,
       children: [
         {path:'/', element: <Home />},
-        {path:'/categories', element: <Categories />},
+        {path:'/collections', element: <Categories />},
         {path:'/about', element: <About />},
         {path:'/contact', element: <Contact />},
       ]

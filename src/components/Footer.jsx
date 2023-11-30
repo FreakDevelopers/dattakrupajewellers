@@ -78,7 +78,7 @@ function Footer() {
     <footer className="text-gray-300 bg-gray-800 px-4 py-5 mx-auto md:px-24">
       <div className="gap-6 justify-between md:flex">
         <div className="flex-1">
-          <div className="max-w-xs">
+          <div className="max-w-full md:max-w-md">
             <Link to={"/"} className="flex items-center">
               <img
                 src="https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"
@@ -88,7 +88,7 @@ function Footer() {
                 Dattakrupa Jewellers
               </span>
             </Link>
-            <p className="leading-relaxed mt-2 text-[15px]">
+            <p className="leading-relaxed px-2 mt-2 text-[15px]">
               Lorem Ipsum has been the industry's standard dummy text ever since
               the 1500s.
             </p>
@@ -97,10 +97,10 @@ function Footer() {
         <div className="flex-1 mt-10 space-y-6 items-center justify-between sm:flex md:space-y-0 md:mt-0">
           {footerNavs.map((item, idx) => (
             <ul className="space-y-4" key={idx}>
-              <h4 className="text-gray-300 font-medium text-lg">
+              <h4 className="text-gray-300 mr-4 font-medium text-lg">
                 {item.label}
+                <div className="w-8 h-1 bg-yellow-500"></div>
               </h4>
-              <div className="w-8 h-1 bg-yellow-500"></div>
               {item.items.map((el, idx) => (
                 <li key={idx}>
                   <a
@@ -117,12 +117,12 @@ function Footer() {
       </div>
       <div className="mt-8 py-6 border-t items-center justify-between sm:flex">
         <div className="mt-4 sm:mt-0">
-          &copy; 2022-{year} Dattakrupa Jewellers All rights reserved. Made with
-          ❤ by{" "}
+          &copy; {year} Dattakrupa Jewellers. All rights reserved. Designed &
+          Developed by{" "}
           <a
             href="https://freakdevelopers.com"
             target="_blank"
-            className="ml-1 text-gray-300 bg-gray-700 rounded px-1 py-[1px] hover:bg-gray-600"
+            className="ml-1 text-yellow-500 bg-gray-700 rounded px-1 py-[1px] hover:bg-gray-600"
           >
             FreakDevs
           </a>
@@ -142,13 +142,13 @@ function Footer() {
             </li>
 
             <li className="w-10 h-10 bg-gray-700 hover:bg-gray-300 rounded-full flex items-center justify-center">
-              <a href="javascript:void()">
+              <a href="https://instagram.com/dattakrupa_jewellers_?igshid=OGQ5ZDc2ODk2ZA==">
                 <FaInstagram class="svg-icon w-6 h-6 text-gray-300 hover:text-gray-700" />
               </a>
             </li>
 
             <li className="w-10 h-10 bg-gray-700 hover:bg-gray-300 rounded-full flex items-center justify-center">
-              <a href="javascript:void()">
+              <a href="https://api.whatsapp.com/send/?phone=%2B919130842940&text&type=phone_number&app_absent=0">
                 <FaWhatsapp class="svg-icon w-6 h-6 text-gray-300 hover:text-gray-700" />
               </a>
             </li>

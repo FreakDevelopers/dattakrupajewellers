@@ -1,12 +1,12 @@
 import React from "react";
-import PromoSection from "../components/PromoSection/PromoSection";
+import Testimonials from "../components/Testimonials/Testimonials";
 
 function About() {
   return (
     <>
       <section className="text-gray-600 body-font">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col lg:items-start items-center">
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+        <div className="container mx-auto flex px-5 py-12 md:flex-row flex-col lg:items-start items-center">
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8 md:mb-0">
             <img
               className="object-cover object-center rounded bg-orange-50"
               alt="hero"
@@ -18,10 +18,12 @@ function About() {
               About Us
             </h1>
             <p className="mb-8 leading-relaxed">
-              Copper mug try-hard pitchfork pour-over freegan heirloom neutra
-              air plant cold-pressed tacos poke beard tote bag. Heirloom echo
-              park mlkshk tote bag selvage hot chicken authentic tumeric
-              truffaut hexagon try-hard chambray.
+              Dattakrupa Jewellers invites you to explore a world where elegance
+              meets craftsmanship. From captivating rings to statement
+              necklaces, our curated collections redefine sophistication. Every
+              piece is meticulously crafted to celebrate your unique style.
+              Explore our timeless creations and make every moment
+              unforgettable.
             </p>
             <ul className="sm:ml-8 list-disc leading-relaxed text-left">
               <li>Handmade Designs</li>
@@ -29,17 +31,10 @@ function About() {
               <li>Handmade Designs</li>
               <li>Custom Designs</li>
             </ul>
-            {/* <div className="flex justify-center">
-              <button className="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
-                Button
-              </button>
-              <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                Button
-              </button>
-            </div> */}
           </div>
         </div>
       </section>
+      <Testimonials />
     </>
   );
 }
