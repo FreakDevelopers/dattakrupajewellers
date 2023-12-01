@@ -99,7 +99,7 @@ function Footer() {
             <ul className="space-y-4" key={idx}>
               <h4 className="text-gray-300 mr-4 font-medium text-lg">
                 {item.label}
-                <div className="w-8 h-1 bg-yellow-500"></div>
+                <div className="w-8 h-[2px] bg-yellow-500"></div>
               </h4>
               {item.items.map((el, idx) => (
                 <li key={idx}>

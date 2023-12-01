@@ -69,11 +69,11 @@ function ProductLists() {
         <div className="w-12 h-1 ml-4 bg-yellow-500"></div>
         <div className="flex flex-wrap my-4">
           {products.map((product) => (
-            <div key={product.id} className="lg:w-1/4 md:w-1/2 p-4 w-full">
+            <div key={product.id} className="lg:w-1/4 md:w-1/2 p-4 w-full rounded hover:shadow-[0px_0px_15px_0px_rgba(234,_179,_8,_1)] border-2 border-transparent hover:border-2 border-spacing-8">
               <a className="block relative h-48 rounded overflow-hidden">
                 <img
                   alt="ecommerce"
-                  className="object-cover object-center w-full h-full block"
+                  className="object-cover object-center w-full h-full block transition-all ease-linear duration-300 hover:scale-110"
                   src={product.path}
                 />
               </a>

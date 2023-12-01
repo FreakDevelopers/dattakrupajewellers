@@ -80,7 +80,7 @@ function Navbar() {
                   className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   {link.title}
-                  <div className="w-6 h-1 bg-yellow-500"></div>
+                  <div className="w-6 h-[2px] bg-yellow-500"></div>
                 </Link>
               </>
             ))}

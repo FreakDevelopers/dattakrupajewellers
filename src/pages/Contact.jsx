@@ -90,8 +90,9 @@ function Contact() {
               <li key={idx} className="md:flex-1">
                 <h4 className="text-gray-800 text-lg font-medium">
                   {item.title}
+                  <div className="h-[2px] bg-yellow-500 w-6"></div>
                 </h4>
-                <div className="mt-3 flex items-start gap-x-3">
+                <div className="mt-4 flex items-start gap-x-3">
                   <div className="flex-none text-gray-400">{item.icon}</div>
                   <p>{item.contact}</p>
                 </div>
@@ -114,6 +115,7 @@ function Contact() {
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             Contact Us
+            <div className="h-1 mt-2 bg-yellow-500 w-12"></div>
           </h1>
           <p className="leading-relaxed mb-5 text-gray-600">
             We’d love to hear from you! Please fill out the form bellow.
@@ -158,7 +160,7 @@ function Contact() {
             Send
           </button>
           <p className="text-xs text-gray-500 mt-3">
-          Let us know how we can help.
+            Let us know how we can help.
           </p>
         </div>
       </div>
