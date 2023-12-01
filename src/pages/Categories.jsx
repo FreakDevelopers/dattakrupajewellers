@@ -1,8 +1,11 @@
 import React from 'react'
+import ProductPreview from '../components/Products/ProductPreview'
 
 function Categories() {
   return (
-    <div>Categories</div>
+    <div>
+      <ProductPreview />
+    </div>
   )
 }
 
