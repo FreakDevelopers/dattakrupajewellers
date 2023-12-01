@@ -25,7 +25,7 @@ function FAQs() {
   ];
 
   return (
-    <section className="leading-relaxed max-w-screen-xl my-12 mx-auto px-4 md:px-8">
+    <section className="leading-relaxed max-w-screen-lg my-12 mx-auto px-4 md:px-8">
       <div className="space-y-3 text-center">
         <h1 className="text-3xl text-gray-800 font-semibold">
           Frequently Asked Questions

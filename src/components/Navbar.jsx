@@ -25,18 +25,15 @@ function Navbar() {
   const [open, setOpen] = useState(false);
   const handleMenu = () => {
     setOpen((prev) => !prev);
-    console.log(open);
   };
   return (
-    <nav className="bg-gray-800">
+    <nav className="bg-gray-900 sticky top-0 z-10">
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link to={"/"} className="text-white">
-              <img src={"https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"} alt="DJ_LOGO" srcset="" className="h-14 w-14" />
-            </Link>
-            <Link to={"/"} className="text-white ml-1">
-              <span>Dattakrupa Jewellers</span>
+          <div className="flex items-center" onClick={()=>setOpen(false)}>
+            <Link to={"/"} className="flex items-center text-white">
+              <img src={"https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"} alt="DJ_LOGO" srcSet="" className="h-14 w-14" />
+              <span className="ml-1 lg:text-lg font-bold uppercase">Dattakrupa Jewellers</span>
             </Link>
           </div>
           {/* navLinks */}
@@ -68,8 +65,8 @@ function Navbar() {
       </div>
       {/* mobile-menu */}
       {open ? (
-        <div className="md:hidden bg-slate-700">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div className="md:hidden bg-slate-800">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
             {/* <hr /> */}
             {navLinks.map((link, index) => (
               <>
@@ -80,7 +77,7 @@ function Navbar() {
                   className="text-gray-300 hover:text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
                 >
                   {link.title}
-                  <div className="w-6 h-[2px] bg-yellow-500"></div>
+                  <div className="w-6 h-[2px] bg-yellow-500 mx-auto"></div>
                 </Link>
               </>
             ))}

@@ -8,7 +8,7 @@ function About() {
         <div className="container mx-auto flex px-5 py-12 md:flex-row flex-col lg:items-start items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-8 md:mb-0">
             <img
-              className="object-cover object-center rounded bg-orange-50"
+              className="object-cover object-center rounded bg-orange-50 shadow-[0px_0px_15px_0px_rgba(234,_179,_8,_1)]"
               alt="hero"
               src="https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"
             />
