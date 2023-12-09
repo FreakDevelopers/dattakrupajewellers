@@ -38,11 +38,11 @@ function Testimonials() {
     }, 4000);
     // Cleanup the interval when the component is unmounted or when the dependency array is empty
     return () => clearInterval(intervalId);
-  }, []);
+  });
   return (
-    <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <div className="max-w-3xl mx-auto text-center">
+    <section className="my-14 h-[350px]">
+      <div className="max-w-screen-xl max-h-fit h-full mx-auto px-4 md:px-8 relative">
+        <div className="max-w-3xl mx-auto h-[300px] text-center">
           <h3 className="text-yellow-500 font-semibold pb-6">
             What people are saying
           </h3>
@@ -52,7 +52,7 @@ function Testimonials() {
                 <li key={idx}>
                   <figure>
                     <blockquote>
-                      <p className="text-gray-800 text-xl font-semibold sm:text-2xl">
+                      <p className="text-gray-800 text-xl font-semibold h-[100px] sm:text-2xl">
                         “{item.quote}“
                       </p>
                     </blockquote>
@@ -78,7 +78,7 @@ function Testimonials() {
             )}
           </ul>
         </div>
-        <div className="mt-6">
+        <div className="mt-5">
           <ul className="flex gap-x-3 justify-center">
             {testimonials.map((item, idx) => (
               <li key={idx}>
