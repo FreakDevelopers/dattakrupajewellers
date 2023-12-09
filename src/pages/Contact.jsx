@@ -103,7 +103,7 @@ function Contact() {
       </div>
 
       <div className="px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="w-full lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 flex items-end justify-start">
+      <div className="w-full lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden mt-10 sm:mr-10 flex items-end order-2 sm:order-1">
           <iframe
             width="100%"
             height="100%"
@@ -112,7 +112,7 @@ function Contact() {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.7905540154425!2d73.8581374748725!3d15.814994084828266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbf8d28ace206bf%3A0x800710dc86c4fb7b!2sDATTAKRUPA%20JEWELLERS!5e0!3m2!1sen!2sin!4v1700313465336!5m2!1sen!2sin"
           />
         </div>
-        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-10 order-1 sm:order-2">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             Contact Us
             <div className="h-1 mt-2 bg-yellow-500 w-12"></div>
