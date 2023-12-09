@@ -1,6 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, form.current, import.meta.env.VITE_EMAILJS_PUBLIC_KEY)
+      .then((error) => {
+        // TODO: Remove once fully tested, and add toast for success message.
+        console.log(error.text);
+      });
+  };
+
   const contactMethods = [
     {
       icon: (
@@ -70,7 +82,7 @@ function Contact() {
     },
   ];
   return (
-    <section className="text-gray-600 body-font relative">
+    <form ref={form} onSubmit={sendEmail} className="text-gray-600 body-font relative">
       <div className="max-w-screen mx-auto px-4 py-4 text-gray-600 md:px-8 md:py-12">
         <div className="max-w-full space-y-3">
           {/* <h3 className="text-indigo-600 font-semibold">
@@ -127,7 +139,7 @@ function Contact() {
             <input
               type="text"
               id="name"
-              name="name"
+              name="from_name"
               className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -138,7 +150,7 @@ function Contact() {
             <input
               type="email"
               id="email"
-              name="email"
+              name="reply_to"
               className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
@@ -164,7 +176,7 @@ function Contact() {
           </p>
         </div>
       </div>
-    </section>
+    </form>
   );
 }
 
