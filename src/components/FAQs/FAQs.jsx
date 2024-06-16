@@ -38,7 +38,9 @@ function FAQs() {
       </div>
       <div className="mt-14 max-w-full mx-auto">
         {faqsList.map((item, idx) => (
-          <FaqsCard idx={idx} faqsList={item} />
+          <div key={idx}>
+            <FaqsCard idx={idx} faqsList={item} />
+          </div>
         ))}
       </div>
     </section>

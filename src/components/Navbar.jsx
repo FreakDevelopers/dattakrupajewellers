@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   {
@@ -22,6 +22,8 @@ const navLinks = [
 ];
 
 function Navbar() {
+  const { pathname } = useLocation();
+  console.log(pathname);
   const [open, setOpen] = useState(false);
   const handleMenu = () => {
     setOpen((prev) => !prev);
@@ -30,10 +32,19 @@ function Navbar() {
     <nav className="bg-gray-900 sticky top-0 z-10">
       <div className="mx-auto px-4 sm:px-6 lg:px-24">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center" onClick={()=>setOpen(false)}>
+          <div className="flex items-center" onClick={() => setOpen(false)}>
             <Link to={"/"} className="flex items-center text-white">
-              <img src={"https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"} alt="DJ_LOGO" srcSet="" className="h-14 w-14" />
-              <span className="ml-1 lg:text-lg font-bold uppercase">Dattakrupa Jewellers</span>
+              <img
+                src={
+                  "https://ik.imagekit.io/dj/dj/logo/logo.png?updatedAt=1701258840163"
+                }
+                alt="DJ_LOGO"
+                srcSet=""
+                className="h-14 w-14"
+              />
+              <span className="ml-1 lg:text-lg font-bold uppercase">
+                Dattakrupa Jewellers
+              </span>
             </Link>
           </div>
           {/* navLinks */}
@@ -41,7 +52,9 @@ function Navbar() {
             <div className="ml-10 flex items-baseline space-x-4">
               {navLinks.map((link, index) => (
                 <Link
-                  className="text-gray-300 transition-all duration-500 hover:bg-gray-600 hover:text-white px-3 py-2 rounded-md text-md font-medium"
+                  className={`${
+                    pathname == link.link ? "border-b-2 border-b-red-500" : ""
+                  } text-gray-300 hover:text-white px-3 py-1 text-md font-medium`}
                   key={index}
                   to={link.link}
                 >
