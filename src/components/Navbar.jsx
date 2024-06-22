@@ -23,7 +23,6 @@ const navLinks = [
 
 function Navbar() {
   const { pathname } = useLocation();
-  console.log(pathname);
   const [open, setOpen] = useState(false);
   const handleMenu = () => {
     setOpen((prev) => !prev);
