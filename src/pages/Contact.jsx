@@ -1,9 +1,13 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import CaptchaBox from '../components/Captcha/CaptchaBox';
 
 function Contact() {
   const form = useRef();
+  // Define submit button ID.
+  const buttonId = "ContactBtn";
   const contactMethods = [
     {
       icon: (
@@ -188,9 +192,15 @@ function Contact() {
                 defaultValue={""}
               />
             </div>
+
+            {/* Google ReCaptcha for Contact Form */}
+            <CaptchaBox buttonId={buttonId} />
+
             <button
               type="submit"
-              className="text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg"
+              id={buttonId}
+              className="text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg disabled:opacity-30"
+              disabled="disabled"
             >
               Send
             </button>
