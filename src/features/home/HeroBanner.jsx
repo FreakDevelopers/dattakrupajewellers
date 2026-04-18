@@ -2,27 +2,28 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "../../ui/Button";
+import heroBg from "../../assets/img/jewellery/rings/rb-1.jpg";
 
 export default function HeroBanner() {
   return (
     <section className="relative h-screen min-h-[700px] w-full flex items-center justify-center overflow-hidden bg-dark">
-      {/* Parallax Background Image */}
+      {/* Parallax Background Image — cinematic diamond ring studio shot */}
       <motion.div
         className="absolute inset-0"
-        initial={{ scale: 1.2 }}
+        initial={{ scale: 1.15 }}
         animate={{ scale: 1 }}
-        transition={{ duration: 2.5, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 3, ease: [0.16, 1, 0.3, 1] }}
       >
         <img
-          src="https://ik.imagekit.io/dj/dj/jewellery/earring/e-3.jpg?updatedAt=1701258975020"
-          alt="Luxury Jewellery"
-          className="w-full h-full object-cover"
+          src={heroBg}
+          alt="Diamond Rings — Dattakrupa Jewellers"
+          className="w-full h-full object-cover object-center"
         />
       </motion.div>
 
-      {/* Multi-layer overlays for depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/30 to-dark" />
-      <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-dark/60" />
+      {/* Multi-layer overlays — stronger top to suppress source watermark, softer bottom to reveal rings */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/40 to-dark/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dark/50 via-transparent to-dark/50" />
 
       {/* Decorative corner elements */}
       <div className="absolute top-0 left-0 w-32 h-32 border-l border-t border-gold/20 m-8 lg:m-12 pointer-events-none" />
