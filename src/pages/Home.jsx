@@ -1,20 +1,24 @@
 import React from "react";
-import PromoSection from "../components/PromoSection/PromoSection";
-import ProductLists from "../components/Products/ProductLists";
-import FAQs from "../components/FAQs/FAQs";
-import Testimonials from "../components/Testimonials/Testimonials";
-import ContactCTA from "../components/CTA/ContactCTA";
+import HeroBanner from "../features/home/HeroBanner";
+import FeaturedCollections from "../features/home/FeaturedCollections";
+import BestSellers from "../features/home/BestSellers";
+import BrandStory from "../features/home/BrandStory";
+import FeaturedShowcase from "../features/home/FeaturedShowcase";
+import ReviewsCarousel from "../features/home/ReviewsCarousel";
+import InstagramGallery from "../features/home/InstagramGallery";
+import Newsletter from "../features/home/Newsletter";
 
-function Home() {
+export default function Home() {
   return (
     <>
-      <PromoSection />
-      <ContactCTA />
-      <ProductLists />
-      <Testimonials />
-      <FAQs />
+      <HeroBanner />
+      <FeaturedCollections />
+      <BestSellers />
+      <BrandStory />
+      <FeaturedShowcase />
+      <ReviewsCarousel />
+      <InstagramGallery />
+      <Newsletter />
     </>
   );
 }
-
-export default Home;

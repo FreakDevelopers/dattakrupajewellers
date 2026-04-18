@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #D4AF37 #0B0B0B;
+  }
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: #0B0B0B; }
+  ::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 10px; }
+
+  ::selection {
+    background-color: #D4AF37;
+    color: #0B0B0B;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Smooth image rendering */
+  img {
+    image-rendering: auto;
+  }
+}
+
+@layer components {
+  /* Gold shimmer text effect */
+  .gold-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      105deg,
+      #B5952B 0%,
+      #D4AF37 25%,
+      #E5C158 50%,
+      #D4AF37 75%,
+      #B5952B 100%
+    );
+    background-size: 200% auto;
+  }
+
+  .gold-text-animated {
+    @apply gold-text;
+    animation: shimmer 4s ease-in-out infinite;
+  }
+
+  /* Decorative line elements */
+  .line-accent {
+    @apply w-12 h-px bg-gold;
+  }
+
+  .line-accent-long {
+    @apply w-24 h-px bg-gradient-to-r from-transparent via-gold to-transparent;
+  }
+
+  /* Section label */
+  .section-label {
+    @apply font-body text-[11px] font-medium uppercase tracking-[0.35em] text-gold;
+  }
+
+  /* Premium hover card */
+  .hover-lift {
+    @apply transition-all duration-700 ease-luxury;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-2 shadow-2xl;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

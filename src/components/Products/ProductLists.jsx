@@ -1,37 +1,82 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FaHeart } from "react-icons/fa";
 import { products } from "../../data/data";
 
 function ProductLists() {
   return (
-    <section className="text-gray-600 body-font">
-      <div className="container py-5 mx-auto">
-        <h1 className="font-bold text-3xl px-4 py-2 text-black text-center">
-          <span className="text-orange-700">New </span> Arrivings
-        </h1>
-        <div className="w-12 h-1 mx-auto bg-yellow-500"></div>
-        <div className="mt-4 grid md:grid-cols-4 gap-8">
+    <section className="py-20 md:py-28 bg-champagne/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-14 reveal">
+          <span className="section-subtitle text-gold">Curated For You</span>
+          <h2 className="section-title text-brand-black">
+            New <span className="text-gold-gradient italic">Arrivals</span>
+          </h2>
+          <div className="gold-divider" />
+          <p className="font-sans text-gray-500 max-w-md mx-auto">
+            Explore our latest collection of handcrafted jewellery designed to
+            celebrate your unique style.
+          </p>
+        </div>
+
+        {/* Product Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {products.map((product) => (
             <Link
               to={`/product/${product.id}`}
               key={product.id}
-              className="p-4 w-full rounded hover:shadow-[0px_0px_15px_0px_rgba(234,_179,_8,_1)] border-2 border-transparent hover:border-2 border-spacing-8"
+              className="group reveal"
             >
-              <div className="block relative h-48 rounded overflow-hidden">
-                <img
-                  alt="ecommerce"
-                  className="object-cover object-center w-full h-full block transition-all ease-linear duration-300 hover:scale-110"
-                  src={product.path}
-                />
-              </div>
-              <div className="mt-2">
-                <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                  {product.category}
-                </h3>
-                <h2 className="text-gray-900 title-font text-lg font-medium">
-                  {product.name}
-                </h2>
-                <p className="mt-1">₹{product.price}</p>
+              <div className="relative bg-white rounded-sm overflow-hidden transition-all duration-500
+                border border-transparent hover:border-gold/30 hover:shadow-[0_8px_40px_rgba(212,175,55,0.12)]">
+                {/* Image Container */}
+                <div className="relative h-64 overflow-hidden bg-gray-50">
+                  <img
+                    alt={product.name}
+                    className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-110"
+                    src={product.path}
+                  />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-brand-black/0 group-hover:bg-brand-black/10 transition-colors duration-500" />
+
+                  {/* Wishlist Icon */}
+                  <button
+                    className="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm 
+                      flex items-center justify-center opacity-0 group-hover:opacity-100 
+                      translate-y-2 group-hover:translate-y-0 transition-all duration-300
+                      hover:bg-gold hover:text-white text-gray-400"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <FaHeart className="w-3.5 h-3.5" />
+                  </button>
+
+                  {/* Category Badge */}
+                  <div className="absolute bottom-3 left-3 opacity-0 group-hover:opacity-100 
+                    translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                    <span className="bg-brand-black/80 backdrop-blur-sm text-white font-sans text-[10px] uppercase tracking-[0.15em] px-3 py-1.5">
+                      {product.category}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Product Info */}
+                <div className="p-4">
+                  <h3 className="font-sans text-[10px] uppercase tracking-[0.2em] text-gold mb-1">
+                    {product.category}
+                  </h3>
+                  <h2 className="font-serif text-lg text-brand-black group-hover:text-gold transition-colors duration-300">
+                    {product.name}
+                  </h2>
+                  <div className="flex items-center justify-between mt-3">
+                    <p className="font-serif text-lg font-semibold text-gold">
+                      ₹{product.price.toLocaleString()}
+                    </p>
+                    <span className="font-sans text-[10px] uppercase tracking-[0.15em] text-gray-400 group-hover:text-gold transition-colors duration-300">
+                      View Details →
+                    </span>
+                  </div>
+                </div>
               </div>
             </Link>
           ))}

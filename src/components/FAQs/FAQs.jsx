@@ -25,23 +25,30 @@ function FAQs() {
   ];
 
   return (
-    <section className="leading-relaxed max-w-screen-lg my-12 mx-auto px-4 md:px-8">
-      <div className="space-y-3 text-center">
-        <h1 className="text-3xl text-gray-800 font-semibold">
-          Frequently Asked Questions
-        </h1>
-        <div className="w-12 h-1 bg-yellow-500 mx-auto"></div>
-        <p className="text-gray-600 max-w-lg mx-auto text-lg">
-          Answered all frequently asked questions, Still confused? feel free to
-          contact us.
-        </p>
-      </div>
-      <div className="mt-14 max-w-full mx-auto">
-        {faqsList.map((item, idx) => (
-          <div key={idx}>
-            <FaqsCard idx={idx} faqsList={item} />
-          </div>
-        ))}
+    <section className="py-20 md:py-28 bg-white">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="text-center mb-14 reveal">
+          <span className="section-subtitle text-gold">Have Questions?</span>
+          <h2 className="section-title text-brand-black">
+            Frequently Asked{" "}
+            <span className="text-gold-gradient italic">Questions</span>
+          </h2>
+          <div className="gold-divider" />
+          <p className="font-sans text-gray-500 max-w-lg mx-auto">
+            Answered all frequently asked questions. Still confused? Feel free to
+            contact us.
+          </p>
+        </div>
+
+        {/* FAQ Items */}
+        <div className="reveal">
+          {faqsList.map((item, idx) => (
+            <div key={idx}>
+              <FaqsCard idx={idx} faqsList={item} />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
