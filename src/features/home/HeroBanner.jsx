@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "../../ui/Button";
-import heroBg from "../../assets/img/jewellery/rings/rb-1.jpg";
+import heroBg from "../../assets/img/jewellery/banners/ring.png";
 
 export default function HeroBanner() {
   return (
@@ -21,9 +21,9 @@ export default function HeroBanner() {
         />
       </motion.div>
 
-      {/* Multi-layer overlays — stronger top to suppress source watermark, softer bottom to reveal rings */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark/80 via-dark/40 to-dark/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-dark/50 via-transparent to-dark/50" />
+      {/* Multi-layer overlays — transforms the light product bg into cinematic dark atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-dark/30 to-dark/20" />
+      <div className="absolute inset-0 bg-gradient-to-r from-dark/60 via-transparent to-dark/60" />
 
       {/* Decorative corner elements */}
       <div className="absolute top-0 left-0 w-32 h-32 border-l border-t border-gold/20 m-8 lg:m-12 pointer-events-none" />
@@ -38,7 +38,7 @@ export default function HeroBanner() {
           className="flex items-center justify-center gap-4 mb-8"
         >
           <span className="w-12 h-px bg-gold/60" />
-          <span className="section-label text-gold/80">Exclusive Collection 2024</span>
+          <span className="section-label text-gold/80">Exclusive Collection 2026</span>
           <span className="w-12 h-px bg-gold/60" />
         </motion.div>
 
